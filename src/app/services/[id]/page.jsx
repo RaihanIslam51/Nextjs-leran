@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Page = ({ params }) => {
-  const id = parseInt(params.id); // ✅ Convert string to number
+  const id = parseInt(params.id);
 
   const data = [
     { id: 1, name: 'Rahim', btn: 'Click me 1' },
@@ -9,10 +9,8 @@ const Page = ({ params }) => {
     { id: 3, name: 'Tahim', btn: 'Click me 3' },
   ];
 
-  // ✅ Find the matching object
   const singleData = data.find((item) => item.id === id);
 
-  // ✅ Handle if no data found
   if (!singleData) {
     return <h2>No data found for ID: {id}</h2>;
   }
